@@ -1,0 +1,306 @@
+/* Body en BG
+------------------------------*/
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  margin: 0;
+  background: #42D2BB;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+}
+.bgText{
+  transition: 2s all;
+  position: absolute;
+  margin: 0;
+  color: #3BC1AC;
+  transform: rotate(320deg);
+  font-size: 1.5vw;
+  z-index: -1000;
+    font-family: 'Pacifico', cursive;
+  animation: bgTextAni 2s infinite;
+  animation-direction: alternate;
+}
+@keyframes bgTextAni {
+  from{
+    transform: rotate(320deg);
+  }
+  to{
+    transform: rotate(320deg);
+    transform: scale(1.5);
+  }
+}
+/* Asides
+-------------------------------*/
+aside{
+  position: fixed;
+  width: 100px;
+  height: 300px;
+  font-family: 'Lobster', cursive;
+  top: 20%;
+  background: white;
+}
+h3{
+  background: #ffc600;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+i{
+  font-size: 1rem;
+}
+.kliks, .woordenOver{
+  font-size: 2rem;
+  margin: 0;
+  height: 28%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .6s ease;
+}
+.woordenOverMsg, .kliksmsg{
+  border-top: 2px solid #F3C010;
+}
+
+aside.first{
+  left:0;
+  border-radius: 0 40px 5px 0;
+}
+aside.first h3{
+  border-radius: 0 40px 0 0;
+  padding: 3px;
+}
+aside.second{
+  right: 0;
+  border-radius: 40px 0 0 5px;
+}
+aside.second h3{
+  border-radius: 40px 0 0 0;
+}
+/* Next level screen
+-------------------------------*/
+.nextLevel{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.6);
+  z-index: -10;
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 3s all;
+  /* transform-origin:; */
+}
+.nextLevelAni{
+  animation: nextlevelAnimation 3s forwards;
+}
+@keyframes nextlevelAnimation {
+  to{
+    z-index: 5;
+    opacity: 1;
+  }
+}
+
+.nextLevelMessage{
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 5%;
+  display: flex;
+  font-family: 'Lobster', cursive;
+  flex-direction: column;
+  transform: scale(0);
+  transition: 2s all;
+  transform-origin: center;
+  box-shadow: 0px 0px 33px 4px rgba(255,255,255,1);
+}
+.congratz{
+  margin-top: 20%;
+}
+.levelName{
+  margin-top: 5%;
+  font-size: 2rem;
+  color: #F3C010;
+}
+.nextLevelbtn{
+  margin-top: auto;
+  width: 100%;
+  align-self: flex-end;
+  border-radius: 0 0 15px 15px;
+  border: none;
+  border-bottom: 5px solid #F3C010;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  padding: 0;
+  text-transform: capitalize;
+}
+/* Container items
+-------------------------------*/
+.title, .logo{
+  font-family: 'Pacifico', cursive;
+  font-size: 1rem;
+  margin-top: 0;
+  color: white;
+}
+.logo{
+  margin: 0;
+  color: black;
+  font-size: 2.5rem;
+}
+
+.screenChoices {
+  background: #F7F7F7;
+  width: 600px;
+  height: 600px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 41px 5px rgba(0,0,0,0.35);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  background: #ffc600;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 5px solid #F3C010;
+  width: 100%;
+  font-family: 'Lobster', cursive;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  width: 25%;
+  border-right: black solid 1px;
+  text-align: center;
+}
+.menuUnlockedTransition{
+  transition: all 2s;
+}
+i{
+  margin-left: 10px;
+}
+.menu a:hover {
+  transition: all .2s;
+  background: black;
+  color: white;
+}
+
+.menu a:first-child {
+  border-radius: 15px 0 0 0;
+}
+.menu a:last-child{
+  border-radius: 0 15px 0 0;
+}
+
+.menu a:last-child {
+  border: none;
+}
+a.disabled{
+  background: lightgrey;
+  color: grey;
+  pointer-events: none;
+  cursor: default;
+}
+.drugsSlang {
+  width: 400px;
+  height: 400px;
+  background: white;
+  margin: 0 auto;
+  margin-top: 2rem;
+  position: relative;
+  border:2px solid #F3C010;
+}
+
+h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 400;
+  font-style: italic;
+}
+
+p {
+  text-align: center;
+}
+
+.stopRandom, .refresh{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 28%;
+  border-radius: 0;
+  width: 100%;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+button {
+  background: #ffc600;
+  border: black solid 1px;
+  border-radius: 15px;
+  padding: .5rem .7rem;
+  cursor: pointer;
+  transition: .3s all;
+  outline: none;
+}
+
+button:hover {
+  background: black;
+  color: white;
+  border-color: white;
+}
+.result{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+.result >*{
+  background: white;
+  height: 60px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid #F3C010;
+  font-size: 16px;
+}
+/* Animation Script */
+.animatie {
+  transform: scale(1.1);
+  opacity: .5;
+}
+
+
+/* Joint synoniemen */
+span {
+  cursor: pointer;
+  position: absolute;
+}
